@@ -1,0 +1,77 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;    
+}
+
+nav
+{
+    width: 100vw;
+    height: 55px;
+    background-color: #212529;
+    display: flex;
+    align-items: center;
+}
+
+nav h2
+{
+    color: white;
+    padding-left: 10px;
+}
+
+#search
+{
+    margin-right: 15px;
+    margin-left: auto;
+    display: flex;
+}
+
+#search input ,#search button
+{
+    height: 37px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 0px solid #000;
+    background-color: white;
+    margin-left: 15px;
+    font-size: 0.9rem;
+    /* color: rgb(162, 255, 118); */
+}
+
+#content_container
+{
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+#input_section
+{
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+#expense_title input
+{
+    width: 456px;
+}
+
+#input-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+}
+
+#expense_title,#expense_date,#expense_amount
+{
+    display: flex;
+}
+
+#expense_title label,#expense_date label,#expense_amount label
+{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
