@@ -50,7 +50,6 @@ nav h2
 {
     width: fit-content;
     margin: auto;
-    padding-bottom: 50px;
 }
 
 #expense_title input
@@ -74,4 +73,43 @@ nav h2
 {
     font-size: 1.5rem;
     margin-right: 10px;
+}
+
+#addBtn
+{
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    border: 0px solid #000;
+    background: burlywood;
+    margin: 25px auto;
+    display: block;
+}
+
+table
+{
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+th
+{
+    font-size: 1.4rem;
+}
+
+tr
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-content: center;
+}
+
+tbody tr
+{
+    height: 30px;
+    background: aquamarine;
+    margin: 5px 0px;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
