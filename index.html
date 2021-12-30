@@ -11,7 +11,7 @@
 
 <body>
     <nav>
-        <div id="title">
+        <div>
             <h2>Expense_Tracker</h2>
         </div>
         <div id="search">
@@ -37,10 +37,14 @@
                         <input type="number" name="amount" id="amount">
                     </div>
                 </div>
-                <button id="addBtn">Add Expense</button>
+                <div id="btn_section">
+                    <button id="addBtn">Add Expense</button>
+                    <button id="clearAll">Clear List</button>
+                </div>
+
             </div>
             <hr>
-            <div id="expense_list">
+            <div id="expense_area">
                 <table>
                     <thead>
                         <tr>
@@ -50,29 +54,8 @@
                             <!-- <th>&nbsp;</th> -->
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td class="title-td">Books</td>
-                            <td>24/02/2003</td>
-                            <td>3500/-</td>
-                            <td><button>&times;</button></td>
+                    <tbody id="tableBody">
                         </tr>
-
-                        <tr>
-                            <td class="title-td">Books</td>
-                            <td>24/02/2003</td>
-                            <td>3500/-</td>
-                            <td><button>&times;</button></td>
-                        </tr>
-
-                        <tr>
-                            <td class="title-td">Books</td>
-                            <td>24/02/2003</td>
-                            <td>3500/-</td>
-                            <td><button>&times;</button></td>
-                        </tr>
-
-                    </tr>
 
                     </tbody>
                 </table>
@@ -80,5 +63,6 @@
         </div>
     </main>
 </body>
+<script src="app.js"></script>
 
 </html>
