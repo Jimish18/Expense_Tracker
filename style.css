@@ -113,3 +113,24 @@ tbody tr
     border: 1px solid #000;
     border-radius: 5px;
 }
+
+td button
+{
+    font-size: 1.4rem;
+    color: red;
+    background: black;
+    border: 0px solid #000;
+    border-radius: 100%;
+    padding: 0px 15px;
+}
+
+.title-td
+{
+    text-align: start;
+    padding-left: 10px;
+}
+
+button:hover
+{
+    cursor: pointer;
+}
