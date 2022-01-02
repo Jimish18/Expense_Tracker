@@ -4,6 +4,18 @@ let expense_title = document.getElementById("title");
 let expense_date = document.getElementById("date");
 let expense_amount = document.getElementById("amount");
 
+function validate()
+{
+    if(expense_title.value.length < 2 || expense_date.value.length < 10 || expense_amount.value < 1)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
 
 function showList() 
 {
@@ -13,7 +25,7 @@ function showList()
     let tableBody = document.getElementById("tableBody");
     expenseObj.forEach(function(element,index)
     {
-        uiString += `<tr>
+        uiString += `<tr class = "expenseArea">
                         <td class="title-td">${element.title}</td>
                         <td>${element.date}</td>
                         <td>${element.amount}&#8377;</td>
@@ -71,8 +83,15 @@ function submitData(e)
         amount : expense_amount.value
     }
 
-    expenseObj.push(myExpenseObj);
-    localStorage.setItem("expenseList",JSON.stringify(expenseObj));
+    if(validate())
+    {
+        expenseObj.push(myExpenseObj);
+        localStorage.setItem("expenseList",JSON.stringify(expenseObj));
+    }
+    else
+    {
+        alert("Enter valid data");
+    }
     
     clear();
     showList();
@@ -95,3 +114,30 @@ clearAll.addEventListener("click",function()
 })
 
 showList();
+
+
+
+let searchArea = document.getElementById("searcharea");
+
+searchArea.addEventListener("input",function()
+{
+    let inputVal = searchArea.value;
+
+    let allExpenseArea = document.getElementsByClassName("expenseArea");
+    // console.log(allExpenseArea);
+    Array.from(allExpenseArea).forEach(function(element)
+    {
+        let trTitle = element.getElementsByTagName("td")[0].innerHTML;
+        
+        if(trTitle.includes(inputVal))
+        {
+            element.style.display = "grid";
+        }
+        else
+        {
+            element.style.display = "none";
+        }
+    })
+
+
+})

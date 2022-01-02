@@ -61,6 +61,11 @@ nav h2
     font-size: 0.9rem;
 }
 
+#searcharea:focus
+{
+    outline: none;
+}
+
 #search button
 {
     background: #04aa6d;
