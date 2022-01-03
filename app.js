@@ -66,6 +66,7 @@ function deleteExpense(index)
     expenseObj.splice(index,1);
     localStorage.setItem("expenseList",JSON.stringify(expenseObj));
     showList();
+    totalExpenseCalc();
 }
 
 
@@ -112,6 +113,7 @@ clearAll.addEventListener("click",function()
     {
         localStorage.clear();
         showList();
+        totalExpenseCalc();
     }
 })
 
