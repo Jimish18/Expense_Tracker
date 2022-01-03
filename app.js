@@ -1,4 +1,5 @@
-
+showList();
+totalExpenseCalc();
 
 let expense_title = document.getElementById("title");
 let expense_date = document.getElementById("date");
@@ -95,6 +96,7 @@ function submitData(e)
     
     clear();
     showList();
+    totalExpenseCalc();
 
     e.preventDefault();
 
@@ -113,7 +115,7 @@ clearAll.addEventListener("click",function()
     }
 })
 
-showList();
+
 
 
 
@@ -141,3 +143,18 @@ searchArea.addEventListener("input",function()
 
 
 })
+
+
+function totalExpenseCalc()
+{
+    let totalExpense = document.getElementById("totalExpense");
+    let sum = 0;
+    getLocalStorage();
+
+    expenseObj.forEach(function(ele)
+    {
+        sum += Number(ele.amount);
+    })
+
+    totalExpense.innerHTML = `Total Expense : ${sum} &#8377;`;
+}
